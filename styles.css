@@ -1,9 +1,18 @@
+/* Color Palette */
+:root {
+  --primary-bg: #F9F6EE; 
+  --secondary-bg: #0B0B0B; 
+  --accent: #e0c97f;       
+  --text-dark: #0B0B0B;
+  --text-light: #F9F6EE;
+}
+
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f9fb;
-  color: #1a1a1a;
+  background-color: var(--primary-bg);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
@@ -16,8 +25,8 @@ body {
 
 
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background-color: var(--secondary-bg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -34,41 +43,43 @@ header {
   margin: 0;
   font-weight: 700;
   font-size: 1.3rem;
-  color: #0078ff;
+  color: var(--accent);
 }
 
 nav a {
   margin-left: 1rem;
   text-decoration: none;
-  color: #333;
+  color: var(--text-light);
   font-weight: 500;
   transition: color 0.2s ease-in-out;
 }
 
 nav a:hover {
-  color: #0078ff;
+  color: var(--accent);
 }
 
 
 .hero {
   padding: 5rem 0;
   text-align: center;
-  background: linear-gradient(135deg, #0078ff, #00bfff);
-  color: #fff;
+  background: var(--secondary-bg);
+  color: var(--text-light);
 }
 
 .hero-container h2 {
   font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .hero-container span {
-  color: #ffed4a;
+  color: var(--accent);
 }
 
 .hero p {
   max-width: 600px;
   margin: 1rem auto;
   font-size: 1.1rem;
+  color: #dcdcdc;
 }
 
 .cta {
@@ -78,8 +89,8 @@ nav a:hover {
 .btn {
   display: inline-block;
   padding: 0.8rem 1.4rem;
-  background-color: #fff;
-  color: #0078ff;
+  background-color: var(--accent);
+  color: var(--secondary-bg);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -88,31 +99,32 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: #ffed4a;
-  color: #000;
+  background-color: var(--text-light);
+  color: var(--secondary-bg);
 }
 
 .btn.secondary {
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
 .btn.secondary:hover {
-  background-color: #fff;
-  color: #0078ff;
+  background-color: var(--accent);
+  color: var(--secondary-bg);
 }
 
 
 .section {
   padding: 4rem 0;
   text-align: center;
+  background-color: var(--primary-bg);
 }
 
 .section h2 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: #222;
+  color: var(--secondary-bg);
 }
 
 
@@ -123,11 +135,12 @@ nav a:hover {
 }
 
 .card {
-  background-color: #fff;
+  background-color: var(--secondary-bg);
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  color: var(--text-light);
 }
 
 .card:hover {
@@ -137,7 +150,7 @@ nav a:hover {
 .card a {
   display: inline-block;
   margin-top: 1rem;
-  color: #0078ff;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
@@ -157,29 +170,32 @@ nav a:hover {
 .skills-grid span {
   display: inline-block;
   padding: 0.6rem 1rem;
-  border: 1.5px solid #0078ff;
-  color: #0078ff;
+  border: 1.5px solid var(--secondary-bg);
+  color: var(--secondary-bg);
   border-radius: 6px;
   font-weight: 600;
+  background-color: var(--primary-bg);
   transition: all 0.3s ease;
 }
 
 .skills-grid span:hover {
-  background-color: #0078ff;
-  color: #fff;
+  background-color: var(--secondary-bg);
+  color: var(--text-light);
 }
 
 
 .contact p {
   margin-bottom: 1.5rem;
+  color: var(--secondary-bg);
 }
 
 
 footer {
-  background-color: #fff;
-  box-shadow: 0 -1px 6px rgba(0,0,0,0.05);
+  background-color: var(--secondary-bg);
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
   text-align: center;
+  color: var(--text-light);
 }
 
 .footer-container {
@@ -192,11 +208,12 @@ footer {
 .footer-container .social a {
   margin-left: 1rem;
   text-decoration: none;
-  color: #0078ff;
+  color: var(--accent);
+  transition: color 0.3s ease;
 }
 
 .footer-container .social a:hover {
-  text-decoration: underline;
+  color: var(--text-light);
 }
 
 
@@ -208,4 +225,25 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
