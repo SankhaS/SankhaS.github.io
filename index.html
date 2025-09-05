@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of YOUR_NAME - Developer & Data Enthusiast">
+  <title>YOUR_NAME | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">SANKHASUBHRA GHOSAL</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+    <div class="container hero-container">
+      <h2>Hi, I'm <span>SANKHASUBHRA GHOSAL</span></h2>
+      <p>A passionate <b>developer</b> and <b>upcoming data enthusiast</b> crafting elegant and efficient solutions.</p>
+      <div class="cta">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="https://github.com/SankhaS" target="_blank" class="btn secondary">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="about" class="section">
+    <div class="container about-container">
+      <h2>About Me</h2>
+      <p>
+        I’m a software developer and aspiring <b>data scientist</b> with a strong foundation in computer science. My interest in data science began while working on a client project, where I discovered the power of data-driven insights. Currently I’m pursuing a Master’s in Data Science at the University of Maryland, focusing on analytics, machine learning, and cloud-based solutions. I’m passionate about solving complex problems and building innovative, scalable solutions.
+      </p>
+    </div>
+  </section>
+
+  
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Lincoln Financial Project</h3>
+          <p>Contributed to Lincoln Financial Project as an integration developer using Mulesoft, Salesforce and Anypoint
+Platform to create an application integrating between Salesiq (Database), Reltio (Master Data Management
+Center) and Salesforce (UI). Also helped in Data Migration from legacy systems.
+Analyzed and incorporated client requirements like producing efficient batch jobs for syncing and storing
+customer data amongst several data management systems and provided the most optimal solutions.</p>
+        </div>
+        <div class="card">
+          <h3>Farmers World Insurance Project</h3>
+          <p>Involved in Farmers New World Life Project to digitize their insurance system and integrate Life Integration
+Services with several third-party systems like RLUS, Underwriting Engine, Life Underwriting Platform,
+Dremio, CDGC and Life Data Platform.</p>
+        </div>
+        <div class="card">
+          <h3>Ascension Foundry Project</h3>
+          <p>The aim of the project was to create an integration system using InterSystems HealthConnect and MoveIt
+(controlled file transfer software using secure file transfer protocols) to transfer private customer healthcare
+information to destination vendors (medical labs, hospitals) and store them in high performance databases after
+undergoing required data transformations according to HL7 specifications.
+● Involved in performing data transformations according to business rules and HL7 specification to send private
+patient health information to vendor systems through MoveIt and store them in high performance databases.
+● Understood client requirements to contribute to designing the business rules that enabled adequate storage
+and maintenance of private patient data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span>Python</span>
+        <span>Java</span>
+        <span>MuleSoft</span>
+        <span>Data Science</span>
+        <span>SQL</span>
+        <span>Git & GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Let's connect! Feel free to reach out if you'd like to collaborate or chat.</p>
+      <a href="mailto:sankhasubhra@gmail.com" class="btn">Say Hello</a>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="container footer-container">
+      <p>© <span id="year"></span> Contact:</p>
+      <div class="social">
+        <a href="https://github.com/SankhaS" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/sankha-g-b71589137" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
